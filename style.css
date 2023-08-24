@@ -130,7 +130,8 @@ html, body, * {
 	grid-column: 1 / 5;
 	grid-row: 5 / 6;
 	place-self: center;
-	height: 100vh;
+	height: 100%;
+	padding: 50px 0;
 	display: flex;
 	align-items: center;
 }
@@ -217,6 +218,9 @@ html, body, * {
 	bottom: 50px;
 	text-align: center;
 	margin: auto 150px;
+	display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30px 100px;
 }
 
 .content .title {
@@ -419,9 +423,6 @@ html, body, * {
 	.block_5 {
 		grid-column: 1 / 3;
 		grid-row: 8 / 9;
-		height: auto;
-		padding-top: 50px;
-		padding-bottom: 50px;
 	}
 	
 	.block_6-1 {
@@ -498,8 +499,20 @@ html, body, * {
 	.content {
 		bottom: 100px;
 		margin: auto 50px;
+		grid-template-rows: 30px 150px;
 	}
 	.client-container {
 		width: 100vw;
+		gap: 50px;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.text-block {
+		padding: 20px;
+	}
+	.content {
+		bottom: 20px;
+		margin: auto 20px;
 	}
 }
