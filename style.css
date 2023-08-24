@@ -55,6 +55,10 @@ html, body, * {
 	fill: var(--color-yellow);
 }
 
+.header .burger {
+	display: none;
+}
+
 .header .menus a {
 	color: var(--color-white);
 	text-decoration: none;
@@ -434,8 +438,46 @@ html, body, * {
 	.header {
 		padding: 30px 25px;
 	}
+	.header .burger {
+		display: block;
+	}
 	.header .menus {
 		display: none;
+		background-color: var(--color-white);
+		box-shadow: 3px 3px 10px var(--color-grayish-blue);
+		border-radius: 3px;
+		position: absolute;
+		transform: translateX(-50%);
+		top: 100px;
+		left: 50%;
+		width: 90vw;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 30px;
+		padding: 20px;
+	}
+	.header .menus.open {
+		display: flex;
+	}
+	.header .menus:after {
+		content: "";
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-bottom: 25px solid var(--color-white);
+		border-left: 25px solid transparent;
+		top: -23px;
+		right: 0px;
+	}
+	.header .menus a {
+		color: var(--color-dark-grayish-blue);
+	}
+	.header .menus a:not(:last-of-type) {
+		margin-right: 0;
+	}
+	.header .menus .contact {
+		background-color: var(--color-yellow);
 	}
 	.text-block {
 		padding: 50px;

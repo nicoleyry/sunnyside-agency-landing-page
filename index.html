@@ -40,7 +40,10 @@
 						fill-rule="nonzero"
 					/>
 				</svg>
-				<div class="menus">
+				<svg class="burger" id="burger" width="24" height="18" xmlns="http://www.w3.org/2000/svg">
+					<path d="M24 16v2H0v-2h24zm0-8v2H0V8h24zm0-8v2H0V0h24z" fill="#FFF" fill-rule="evenodd" />
+				</svg>
+				<div class="menus" id="menus">
 					<a href="#about">About</a>
 					<a href="#services">Services</a>
 					<a href="#projects">Projects</a>
@@ -253,6 +256,11 @@
 						behavior: 'smooth',
 					});
 				});
+			});
+			let menus = document.getElementById('menus');
+			let burger = document.getElementById('burger');
+			burger.addEventListener('click', () => {
+				menus.classList.contains('open') ? menus.classList.remove('open') : menus.classList.add('open');
 			});
 		</script>
 	</body>
