@@ -379,6 +379,48 @@ html, body, * {
 	color: hsl(228, 45%, 44%);
 	text-decoration: none;
 }
+.back-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background-color: transparent;
+	border: 3px solid var(--color-very-dark-grayish-blue);
+	border-radius: 50%;
+	transition: 200ms;
+}
+
+.back-to-top:hover {
+	box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+	width: 55px;
+	height: 55px;
+}
+
+.back-to-top:focus {
+	outline: none;
+}
+
+.back-to-top svg {
+	fill: var(--color-very-dark-grayish-blue);
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.back-to-top:hover svg {
+	animation: bounce 2s infinite linear;
+}
+
+@keyframes bounce {
+	0% {transform: translateX(-50%) translateY(-50%)}
+	25% {transform: translateX(-50%) translateY(-65%)}
+	50% {transform: translateX(-50%) translateY(-50%)}
+	75% {transform: translateX(-50%) translateY(-35%)}
+	100% {transform: translateX(-50%) translateY(-50%)}
+}
 
 @media screen and (max-width: 760px){
 	.container {

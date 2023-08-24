@@ -230,10 +230,16 @@
 					</svg>
 				</div>
 				<div class="attribution">
-					Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-					Coded by <a href="https://www.nicoleyry.com/">Nicole Yang</a>.
+					Challenge by
+					<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+					<a href="https://www.nicoleyry.com/">Nicole Yang</a>.
 				</div>
 			</footer>
+			<button class="back-to-top" id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<path d="M0 16.67l2.829 2.83 9.175-9.339 9.167 9.339 2.829-2.83-11.996-12.17z" />
+				</svg>
+			</button>
 		</div>
 
 		<script>
@@ -248,9 +254,15 @@
 			});
 			let menus = document.getElementById('menus');
 			let burger = document.getElementById('burger');
+			let backToTop = document.getElementById('back-to-top');
+			
 			burger.addEventListener('click', () => {
 				menus.classList.contains('open') ? menus.classList.remove('open') : menus.classList.add('open');
 			});
+
+			window.onscroll = function () {
+				(document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) ? backToTop.style.display = 'block' : backToTop.style.display = 'none';
+			};
 		</script>
 	</body>
 </html>
