@@ -364,6 +364,18 @@ html, body, * {
 	fill: var(--color-white);
 }
 
+.attribution {
+	position: absolute;
+	bottom: 5px;
+	font-size: 11px;
+	text-align: center;
+	z-index: 1;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+	text-decoration: none;
+}
+
 @media screen and (max-width: 760px){
 	.container {
 		grid-template-columns: repeat(2, 1fr);
